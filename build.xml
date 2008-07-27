@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project jinstallprogress">
+<!--this file was created by Eclipse Runnable JAR Export Wizard-->
+<!--ANT 1.7 is required                                        -->
+<target name="create_run_jar">
+ <jar destfile="${basedir}/bin/jpi.jar" filesetmanifest="mergewithoutmain">
+  <manifest>
+   <attribute name="Built-By" value="${user.name}"/>
+   <attribute name="Main-Class" value="ch.mygoodlife.jpi.InstallProgressMonitor"/>
+   <attribute name="Class-Path" value="."/>
+  </manifest>
+  <fileset dir="${basedir}/bin" excludes="jpi.jar"/>
+ </jar>
+ 
+ <zip destfile="${basedir}/dist/jpi-rel10.zip">
+ 	<fileset dir="${basedir}/bin" includes="jpi.jar"/>
+ 	<fileset dir="${basedir}/config" includes="sample.jpi,README.txt"/>
+ </zip>
+	
+ <zip destfile="${basedir}/dist/jpi-rel10-src.zip">
+ 	<fileset dir="${basedir}/src"/>
+ 	<fileset dir="${basedir}/config"/>
+ 	<fileset dir="${basedir}" includes="build.xml"/>
+ </zip>
+</target>
+</project>
