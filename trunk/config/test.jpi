@@ -1,0 +1,10 @@
+# Installation Progress Indicator property file
+..init=Initializing...
+..title=Progress
+#..size=50x300
+..log=yes
+/tmp/.jpi10=10;First step completed
+/tmp/.jpi50=50;Second step completed
+/tmp/.jpiexit=..exit
+c:/temp/test=60;Third step
+c:\\temp\\=80;XY
